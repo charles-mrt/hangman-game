@@ -10,7 +10,7 @@ const keyBoardLetters = [
 
 export const KeyBoard = () => {
   return (
-    <div className="w-full h-auto bg-indigo-700 rounded-md p-2">
+    <div className="w-full h-auto bg-indigo-700 rounded-md px-1 py-2">
       <ul className="w-full h-full flex flex-wrap gap-2 justify-center">
         {keyBoardLetters.map((KeyboardLetter, index) => (
           <li key={index} >
