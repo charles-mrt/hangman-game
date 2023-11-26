@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <main className="w-screen h-screen">
 
-      <div className="max-w-[430px] w-full h-auto bg-slate-900">
+      <div className="max-w-[430px] max-h-[932px] w-full h-full bg-slate-900 flex flex-col justify-between">
 
         <Header />
 
-        <div className=" p-5 flex flex-col gap-6 justify-between">
+        <div className="h-full p-5 flex flex-col gap-6 justify-between">
 
           <div className="w-full flex flex-col justify-between gap-10">
             <GameHeader />
