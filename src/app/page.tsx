@@ -1,9 +1,10 @@
-import Image from 'next/image'
 import { Header } from './components/Header'
 import { KeyBoard } from './components/Keyboard'
 import { GameHeader } from './components/Game-header'
 import { GallowsPole } from './components/gallows/Gallows-pole'
 import { WordField } from './components/word/Word-field'
+
+import { KeyProvider } from './context/Key-provider'
 
 export default function Home() {
   return (
@@ -14,15 +15,17 @@ export default function Home() {
         <Header />
 
         <div className="h-full p-5 flex flex-col gap-6 justify-between">
-
-          <div className="w-full flex flex-col justify-between gap-10">
-            <GameHeader />
-            <GallowsPole />            
-            <WordField totalField={15} />            
-          </div>
-
-          <KeyBoard />
           
+          <KeyProvider>
+            <div className="w-full flex flex-col justify-between gap-10">
+              <GameHeader />
+              <GallowsPole />
+              <WordField totalField={15} />
+            </div>
+
+            <KeyBoard />
+          </KeyProvider>
+
         </div>
 
       </div>
