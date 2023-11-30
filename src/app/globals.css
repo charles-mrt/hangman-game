@@ -3,3 +3,43 @@
 @tailwind utilities;
 
 
+.pendulum {
+  transform-origin: top center;
+  animation: swing 2s infinite ease-in-out
+}
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+.custom-transition {
+  transition: all 3000ms ease-in-out;
+}
+
+.custom-rotate {
+  width: 100%;
+  position:absolute;
+  animation: rotate-animation 4s forwards;
+  transform-origin: bottom right;
+}
+
+@keyframes rotate-animation {
+  0% {
+    bottom:0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    bottom:-100vh;
+  }
+}
