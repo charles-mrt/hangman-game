@@ -1,11 +1,12 @@
+import { Rope } from "./rope/Rope"
 import { Head } from "./hangman-figure/Head"
 import { Body } from "./hangman-figure/Body"
 import { Arm } from "./hangman-figure/Arm"
 import { Leg } from "./hangman-figure/Leg"
-import { Rope } from "./rope/Rope"
+import { WoodenBox } from "./box/Wooden-box"
+
 import { useKeyContext } from "@/app/context/Key-provider"
 import { useEffect, useState } from "react"
-import { Box } from "./box/Box"
 
 
 interface GallowsPoleProps {
@@ -35,13 +36,13 @@ export const GallowsPole = ({ isError }: GallowsPoleProps) => {
 
           <div className={`${count === 0 && 'pendulum'} w-14 flex flex-col items-center `}>
             <div className="flex flex-col items-center mb-1 custom-transition">
-              {count === 0 && <Rope />}
+              <Rope />
             </div>
 
             {count <= 0 ? <Head is_border_color={true} /> : <Head />}
 
             <div className="flex items-center">
-              {count === 0 && <Rope margin="mt-1" />}
+              <Rope margin="mt-1" />
             </div>
 
             <div className="relative w-full flex flex-col items-center ">
@@ -69,11 +70,11 @@ export const GallowsPole = ({ isError }: GallowsPoleProps) => {
             ? (
 
               <div className='custom-rotate'>
-                <Box />
+                <WoodenBox />
               </div>
 
             ) : (
-              <Box />
+              <WoodenBox />
             )
           }
         </div>
