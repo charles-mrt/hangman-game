@@ -2,30 +2,28 @@
 interface WoodenPlankProps {
   width: string
   height: string
-  left?: number
-  right?: number
-  top?: number
-  bottom?: number
-  rotate?: number
+  left?: string
+  right?: string
+  top?: string
+  bottom?: string
+  rotate?: string
 }
 
 export const WoodenSlat = ({ ...props }: WoodenPlankProps) => {
   return (
-    <div className=
-      {`
-        w-${props.width} 
-        h-${props.height}
-        absolute 
-        m-auto  
-        left-${props.right} 
-        right-${props.left}
-        top-${props.top} 
-        bottom-${props.bottom}
-        border-2
-        rotate-${props.rotate}
-       border-gray-800  
-       bg-gray-950 
-     `}
+    <div className={`
+      ${props.width} 
+      ${props.height} 
+      absolute 
+      m-auto 
+      ${props.left}
+      ${props.right} 
+      ${props.top} 
+      ${props.bottom} 
+      ${props.rotate}
+      border-2  
+     border-gray-800 
+     bg-gray-950`} 
     />
   )
 }
