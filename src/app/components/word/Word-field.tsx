@@ -74,7 +74,6 @@ export const WordField = () => {
   useEffect(() => {
     handleKeyClick()
   }, [clickedKey])
-  console.log(word)
 
   const handleRestartGame = () => {
     handleResetLife()
@@ -86,7 +85,7 @@ export const WordField = () => {
 
   return (
     <>
-      <Modal life={lives} onResetButton={handleRestartGame} isPlayerWins={isPlayerWins} />
+      <Modal word={word} life={lives} onResetButton={handleRestartGame} isPlayerWins={isPlayerWins} />
       <Header onResetButton={handleRestartGame} />
 
       <div className="h-full p-5 flex flex-col gap-6 justify-between">
