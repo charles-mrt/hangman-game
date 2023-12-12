@@ -1,5 +1,5 @@
 
-import { Menu, RefreshCw } from "lucide-react"
+import { Menu, RefreshCw } from 'lucide-react'
 
 interface HeaderProps {
   onResetButton: () => void
@@ -20,5 +20,5 @@ export const Header = ({ onResetButton }: HeaderProps) => {
         <RefreshCw />
       </button>
     </div>
-  );
-};
+  )
+}
