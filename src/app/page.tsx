@@ -1,33 +1,17 @@
-import { Header } from './components/Header'
-import { KeyBoard } from './components/Keyboard'
-import { GameHeader } from './components/Game-header'
-import { GallowsPole } from './components/gallows/Gallows-pole'
-import { WordField } from './components/word/Word-field'
-
 import { KeyProvider } from './context/Key-provider'
+import { KeyBoard } from './components/Keyboard'
+import { WordField } from './components/word/Word-field'
+import { Footer } from './components/Footer'
 
 export default function Home() {
   return (
     <main className="w-screen h-screen">
-
-      <div className="max-w-[430px] max-h-[932px] w-full h-full bg-slate-900 flex flex-col justify-between">
-
-        <Header />
-
-        <div className="h-full p-5 flex flex-col gap-6 justify-between">
-          
-          <KeyProvider>
-            <div className="w-full flex flex-col justify-between gap-10">
-              <GameHeader />
-              <GallowsPole />
-              <WordField totalField={15} />
-            </div>
-
-            <KeyBoard />
-          </KeyProvider>
-
-        </div>
-
+      <div className="max-w-[430px] max-h-[932px] w-full h-full bg-gray-950 flex flex-col justify-between">
+        <KeyProvider>
+          <WordField />
+          <KeyBoard />
+        </KeyProvider>
+        <Footer />
       </div>
     </main>
   )
