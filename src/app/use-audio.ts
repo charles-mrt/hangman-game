@@ -1,5 +1,3 @@
-
-
 const gameAudio = {
   player_lose: '/assets/audio/player-lose.mp3',
   player_win: '/assets/audio/player-win.mp3',
@@ -8,9 +6,12 @@ const gameAudio = {
   click: '/assets/audio/click.mp3',
 }
 
+localStorage.setItem('audio-actived', 'true')
+
 export const useAudio = () => {
+
   const playAudio = (audio:string) => {
-    new Audio(audio).play()
+    if (localStorage.getItem('audio-actived') === 'true') new Audio(audio).play()
   }
 
   const playerLose = () => {
