@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, ReactNode, useState } from 'react'
+import { useAudio } from '../use-audio'
 
 interface KeyContextProps {
   clickedKey: string
@@ -14,10 +15,14 @@ interface KeyProviderProps {
 }
 
 export const KeyProvider = ({ children }: KeyProviderProps) => {
+
+  const { keyboardClick } = useAudio() 
+
   const [clickedKey, setClickedKey] = useState("")
 
   const handleKeyClick = (key: string) => {
     setClickedKey(key)
+    keyboardClick()
   }
 
   return (
