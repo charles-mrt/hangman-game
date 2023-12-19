@@ -84,8 +84,15 @@ export const WordField = () => {
   }
 
   return (
-    <>
-      <Modal word={word} life={lives} onResetButton={handleRestartGame} isPlayerWins={isPlayerWins} />
+    <>     
+      {(isPlayerWins || lives === 0) &&       
+          <Modal
+            word={word}
+            life={lives}
+            onResetButton={handleRestartGame}
+            isPlayerWins={isPlayerWins}
+          />       
+      }
       <Header onResetButton={handleRestartGame} />
 
       <div className="h-full p-5 flex flex-col gap-6 justify-between">
