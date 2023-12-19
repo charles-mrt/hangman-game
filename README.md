@@ -32,7 +32,7 @@ git clone https://github.com/charles-mrt/hangman-game.git
 ### 2. Acesse a Pasta do Projeto
 
 ```bash
-cd jogo-da-forca
+cd www
 ```
 
 ### 3. Instale as Dependências
