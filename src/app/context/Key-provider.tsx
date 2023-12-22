@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, ReactNode, useState } from 'react'
+import { createContext, useContext, ReactNode, useState, useEffect } from 'react'
 import { useAudio } from '../use-audio'
 
 interface KeyContextProps {
@@ -24,6 +24,10 @@ export const KeyProvider = ({ children }: KeyProviderProps) => {
     setClickedKey(key)
     keyboardClick()
   }
+
+  useEffect(() => {
+    localStorage.setItem('is-audio-activated', 'true')
+  }, [])
 
   return (
     <KeyContext.Provider value={{ clickedKey, handleKeyClick }}>

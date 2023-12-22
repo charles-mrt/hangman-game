@@ -6,22 +6,18 @@ interface HeaderProps {
   onResetButton: () => void
 }
 
-
 export const Header = ({ onResetButton }: HeaderProps) => {
 
-  const [isAudioActived, setIsAudioActived] = useState(false)
-
-  const handePlayAudio = () => {
-    setIsAudioActived(!isAudioActived)
-    isAudioActived
-      ? localStorage.setItem('audio-actived', 'true')
-      : localStorage.setItem('audio-actived', 'false')
-  }
-
   const [isActiveMenu, setIsActiveMenu] = useState(false)
-  const handleActivMenu = () => {
-    setIsActiveMenu(!isActiveMenu)
+  const [isAudioActivated, setIsAudioActivated] = useState(true)
+
+  const handleActivMenu = () => setIsActiveMenu(!isActiveMenu)
+
+  const toggleAudio = () => {
+    setIsAudioActivated(!isAudioActivated)
+    localStorage.setItem('is-audio-activated', (!isAudioActivated).toString())
   }
+  
   return (
     <div className="w-full bg-slate-950 border-b-2 border-indigo-500 flex items-center justify-between px-4 py-2">
 
@@ -51,10 +47,10 @@ export const Header = ({ onResetButton }: HeaderProps) => {
             <XCircle className="text-gray-700 w-10 h-10" />
           </button>
 
-          <span className="text-white text-xl mb-2">configuracao de audio</span>
-          {isAudioActived
-            ? <button onClick={handePlayAudio} className="text-white flex gap-2 items-center justify-center bg-indigo-600 p-6 rounded-md w-3/4 text-xl font-bold">desativado <VolumeX /></button>
-            : <button onClick={handePlayAudio} className="text-white flex gap-2 items-center justify-center bg-indigo-600 p-6 rounded-md w-3/4 text-xl font-bold">ativado <Volume2 /></button>
+          <span className="text-white text-xl mb-2">configuração de áudio</span>
+          {isAudioActivated
+            ? <button onClick={toggleAudio} className="text-white flex gap-2 items-center justify-center bg-indigo-600 p-6 rounded-md w-3/4 text-xl font-bold">ativado <Volume2 /></button>
+            : <button onClick={toggleAudio} className="text-white flex gap-2 items-center justify-center bg-red-400 p-6 rounded-md w-3/4 text-xl font-bold">desativado <VolumeX /></button>
           }
         </div>}
 
