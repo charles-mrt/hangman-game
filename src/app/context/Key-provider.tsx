@@ -28,7 +28,7 @@ export const KeyProvider = ({ children }: KeyProviderProps) => {
   useEffect(() => {
     localStorage.setItem('is-audio-activated', 'true')
   }, [])
-
+/*  */
   return (
     <KeyContext.Provider value={{ clickedKey, handleKeyClick }}>
       {children}
