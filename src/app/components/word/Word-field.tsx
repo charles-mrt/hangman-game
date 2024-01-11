@@ -95,7 +95,7 @@ export const WordField = () => {
       }
       <Header onResetButton={handleRestartGame} />
 
-      <div className="h-auto px-5 flex flex-col justify-between">
+      <div className="w-full h-auto px-5 flex flex-col justify-between">
 
         <div className="w-full flex flex-col justify-between gap-4">
 
