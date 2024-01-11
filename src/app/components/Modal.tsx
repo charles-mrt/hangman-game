@@ -38,7 +38,7 @@ export const Modal = ({ word, life, onResetButton, isPlayerWins }: ModalProps) =
 
         <div className="bg-red-500 bg-opacity-40 w-full h-full flex items-center justify-center " >
 
-          <div className=" w-11/12 bg-amber-100 rounded-md border-4 border-gray-400 p-4 flex flex-col items-center justify-evenly gap-5 shadow-2xl">
+          <div className=" w-auto bg-amber-100 rounded-md border-4 border-gray-400 p-4 flex flex-col items-center justify-evenly gap-5 shadow-2xl">
             <span className="text-gray-500 text-2xl font-bold text-center">
               resposta: <span className="text-red-600">{word}</span>
             </span>
