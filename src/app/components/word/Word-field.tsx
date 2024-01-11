@@ -97,7 +97,7 @@ export const WordField = () => {
 
       <div className="h-full w-full p-5 flex flex-col gap-6 justify-between">
 
-        <div className="w-full flex flex-col justify-between gap-10">
+        <div className="w-full flex flex-col justify-between gap-4">
 
           <GameHeader life={lives} />
 
