@@ -18,7 +18,7 @@ export const Key = ({ value }: KeyProps) => {
         className="
         text-white text-2xl font-bold uppercase 
         bg-indigo-500 rounded-md 
-        w-12 h-12 md:w-8 md:h-8 2xl:w-14 2xl:h-14         
+        w-8 h-8 2xl:w-14 2xl:h-14         
        hover:bg-indigo-400 flex items-center justify-center"
       >
         {value}
