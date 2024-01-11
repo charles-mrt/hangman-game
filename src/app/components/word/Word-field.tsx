@@ -31,7 +31,8 @@ export const WordField = () => {
   const { handleLetterError, handleResetLife, lives } = usePlayerLives()
 
   const chooseRandomLetters = () => {
-    if (totalField >= 6 && revealedLetters.length === 0) {
+  
+    if (totalField >= 7 && revealedLetters.length === 0) {      
       const randomIndexes: number[] = Array.from({ length: 3 }, () => Math.floor(Math.random() * totalField))
       setRevealedLetters(randomIndexes.map(index => wordLetters[index]))
     }
@@ -68,8 +69,11 @@ export const WordField = () => {
 
   useEffect(() => {
     setWord(getRandomWord())
-    chooseRandomLetters()
   }, [])
+  
+  useEffect(() => {
+    chooseRandomLetters()
+  }, [word])
 
   useEffect(() => {
     handleKeyClick()
