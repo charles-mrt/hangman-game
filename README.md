@@ -66,6 +66,7 @@ O Jogo da Forca estará disponível em `http://localhost:3000`. Divirta-se!
 ## Próxima Versão
 
 Melhorias na Interface e Adição de Recursos.
+- dica de palavra
 
 ## Licença
 
