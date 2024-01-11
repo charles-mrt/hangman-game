@@ -1,16 +1,5 @@
 
-const randomWords = [
-  "cachorro",
-  "gato",
-  "elefante",
-  "banana",
-  "abacaxi",
-  "computador",
-  "programaçao",
-  "javascript",
-  "react",
-  "aleatorio"
-]
+import { randomWords } from "../data"
 
 let lastSelectedWord = ""
 
